@@ -1,0 +1,23 @@
+Worst case: the maximum value is at the end of the array.
+-> relevant input: int[] arr
+-> operations to count: int ret = arr[0] // read the initial max value
+                        for loop // increment i
+                        ret = arr[i] // update max value
+-> number of operations: 1+2n
+-> big-O bound: n
+
+Best case: the maximum value is at the beginning of the array.
+-> relevant input: int[]
+-> operations to count: int ret = arr[0] // read the initial max value
+                        for loop // increment i
+                        ret = arr[i] // update max value
+-> number of operations: 1+n
+-> big-O bound: n
+
+Average case: the maximum value is in the middle of the array.
+-> relevant input: int[]
+-> operations to count: int ret = arr[0] // read the initial max value
+                        for loop // increment i
+                        ret = arr[i] // update max value
+-> number of operations: 1+n+(n/2)
+-> big-O bound: n
