@@ -1,0 +1,11 @@
+T'(0) = 0
+T'(n) = 1 + T'(n-2)
+Let k be the number of unfoldings that we perform of the function. Then we
+have T'(n) = k + T'(n-2k). When we arrive at the base case, T'(n-2k) =
+T'(0), so n-2k = 0, so n = k/2. Plugging the value in the function, we have
+T'(n) = n/2 + T'(0) = n/2 + 0 = n/2. Thus, the explicit formula for the
+number of operations that the function performs in terms of its input n is
+T'(n) = n/2, assuming that n is even and n>=2. The big-O bound for the
+behavior of T' is n.
+The big-O bound of a function does not change if we subtract a constant k  for
+every recursive call.
