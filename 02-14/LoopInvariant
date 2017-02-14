@@ -1,0 +1,17 @@
+1. Entering the loop: when we first enter the loop, we haven't made any
+comparison between elements in the array, so the maximum value should be
+the first element in the array, therefore we choose ret to be the first
+element.
+2. At the end of iteration of the loop: on the i-th iteration of a loop, if
+the element is bigger than the current maximum value stored in ret, we
+update ret to be that element and store it back in ret.
+3. After execution: by satisfying the two previous rules—preserving the
+invariant while entering the loop and on every iteration—we know that the
+loop invariant is preserved when the loop exits. Interpreting the loop
+invariant, we see that this implies that ret is the maximum value of the
+array.
+
+The max function enforces this loop invariant improperly because it updates
+ret when the array element is smaller than the current value in ret, which
+violates the invariant that ret is the maximum element of the array so
+far. Instead, ret should be updated when it is smaller than the array element.
