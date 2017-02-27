@@ -1,0 +1,16 @@
+Line A: typecheck happens during compilation, and the static type of the
+variable is considered.
+The output is "C.foo" because class C contains the method foo that matches
+that of the interface.
+
+Line B: typecheck happens during compilation, and the static type of the
+variable is considered.
+The program fails to compile because the static type is considered, but the
+interface does not contain the method bar.
+
+When we do subtyping with the static type, only the methods in the class
+that implements the interface will be able to be referenced. Reference to
+every other method in that class that does not match the interface will
+fail to compile. So even if a code appears safe, referencing a method in a
+class that exists, it will be rejected by Java's type system if it's
+subtyped with the static type of the interface. 
