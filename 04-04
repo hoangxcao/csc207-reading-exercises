@@ -1,0 +1,7 @@
+public static <T> void inorderPrint(Node<T> cur) {
+        if (cur != null) {
+            inorderPrint(cur.left);
+            System.out.println(cur.value);
+            inorderPrint(cur.right);
+        }
+    }
